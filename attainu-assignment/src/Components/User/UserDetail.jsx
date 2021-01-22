@@ -1,3 +1,4 @@
+import EditUser from '../EditUser';
 import '../../css/UserDetail.css';
 const UserDetail = (props) => {
 	return (
@@ -17,13 +18,20 @@ const UserDetail = (props) => {
 				</p>
 			</div>
 			<div className="card-footer bg-white d-flex justify-content-around">
-				<button className="btn btn-warning rounded-circle">
+				<button
+					className="btn btn-warning rounded-circle"
+					type="button"
+					data-toggle="modal"
+					data-target={`#editUser${props.userData.Id}`}
+					data-whatever="@mdo"
+				>
 					<i className="fa fa-pencil" aria-hidden="true"></i>
 				</button>
 				<button className="btn btn-danger rounded-circle">
 					<i className="fa fa-trash" aria-hidden="true"></i>
 				</button>
 			</div>
+			<EditUser data={props.userData} key={props.userData.Id} />
 		</div>
 	);
 };
