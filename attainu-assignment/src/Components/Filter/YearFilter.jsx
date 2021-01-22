@@ -16,7 +16,7 @@ const YearFilter = (props) => {
 		} else if (e.target.value === '') {
 			changeError(false);
 			changeYear('');
-			props.YearData(null);
+			props.YearData('');
 		} else if (value < curr_year) {
 			changeYear(value);
 			changeError(true);
