@@ -1,5 +1,5 @@
-import AddUser from './AddUser';
-import SearchBar from './SearchBar';
+import AddUser from './User/AddUser';
+import SearchBar from './Search/SearchBar';
 const Header = () => {
 	return (
 		<nav className="navbar navbar-dark bg-dark">

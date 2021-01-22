@@ -1,5 +1,6 @@
-import EditUser from '../EditUser';
+import EditUser from './EditUser';
 import '../../css/UserDetail.css';
+import DeleteUser from './DeleteUser';
 const UserDetail = (props) => {
 	return (
 		<div className="card border-info mb-3 card-user">
@@ -27,11 +28,20 @@ const UserDetail = (props) => {
 				>
 					<i className="fa fa-pencil" aria-hidden="true"></i>
 				</button>
-				<button className="btn btn-danger rounded-circle">
+				<button
+					className="btn btn-danger rounded-circle"
+					type="button"
+					data-toggle="modal"
+					data-target={`#deleteUser${props.userData.Id}`}
+				>
 					<i className="fa fa-trash" aria-hidden="true"></i>
 				</button>
 			</div>
-			<EditUser data={props.userData} key={props.userData.Id} />
+			<DeleteUser
+				userId={props.userData.Id}
+				key={`delete${props.userData.Id}`}
+			/>
+			<EditUser data={props.userData} key={`edit${props.userData.Id}`} />
 		</div>
 	);
 };
