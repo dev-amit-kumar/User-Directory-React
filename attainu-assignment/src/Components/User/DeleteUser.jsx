@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 const base_url = 'http://localhost:5000/users';
 
 const DeleteUser = (props) => {
@@ -13,6 +14,7 @@ const DeleteUser = (props) => {
 				setMsg(
 					'User Information deleted, Kindly refresh for updated data',
 				);
+				props.history.push('/');
 			})
 			.catch((error) => {
 				setError(true);
@@ -59,6 +61,7 @@ const DeleteUser = (props) => {
 						<button
 							type="button"
 							className="btn btn-danger"
+							data-dismiss="modal"
 							onClick={deleteUser}
 						>
 							Delete User
@@ -77,4 +80,4 @@ const DeleteUser = (props) => {
 	);
 };
 
-export default DeleteUser;
+export default withRouter(DeleteUser);

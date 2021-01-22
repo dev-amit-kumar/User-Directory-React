@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import DeleteUser from './DeleteUser';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 const base_url = 'http://localhost:5000/users';
 
 const ViewUser = (props) => {
@@ -40,13 +40,14 @@ const ViewUser = (props) => {
 				Id: data.Id,
 				'Date of birth': `${new Date(dob).toJSON()}`,
 				Email: email,
-				['Created at']: data['Created at'],
+				'Created at': data['Created at'],
 			})
 			.then(() => {
 				setError(false);
-				setMsg(
-					'User Information updated, Kindly refresh for updated data',
-				);
+				setMsg('User Information updated, Redirecting to home page');
+				setTimeout(() => {
+					props.history.push('/');
+				}, 1500);
 			})
 			.catch((error) => {
 				setError(true);
@@ -152,10 +153,7 @@ const ViewUser = (props) => {
 								>
 									Delete User
 								</button>
-								<DeleteUser
-									userId={props.match.params.id}
-									key={`delete${props.match.params.id}`}
-								/>
+								<DeleteUser userId={props.match.params.id} />
 								<Link to="/" className="btn btn-info">
 									Go Back
 								</Link>
@@ -167,4 +165,4 @@ const ViewUser = (props) => {
 		</div>
 	);
 };
-export default ViewUser;
+export default withRouter(ViewUser);
