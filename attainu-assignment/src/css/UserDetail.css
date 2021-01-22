@@ -1,0 +1,10 @@
+.card-user {
+	width: 23%;
+	margin: 0 1%;
+}
+
+@media screen and (max-width: 600px) {
+	.card-user {
+		width: 100%;
+	}
+}

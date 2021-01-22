@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HomePage from './Components/HomePage';
+import HomePage from './Components/Routing';
 import './index.css';
 
 ReactDOM.render(
