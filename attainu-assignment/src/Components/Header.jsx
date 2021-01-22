@@ -1,5 +1,5 @@
-import SearchSuggestion from './SearchSuggestion';
-
+import AddUser from './AddUser';
+import SearchBar from './SearchBar';
 const Header = () => {
 	return (
 		<nav className="navbar navbar-dark bg-dark">
@@ -7,41 +7,25 @@ const Header = () => {
 				User APP
 			</a>
 			<div className="d-flex justify-content-center">
-				<form className="form-inline ml-auto">
-					<div className="input-group">
-						<input
-							type="search"
-							className="form-control"
-							placeholder="Search"
-							aria-label="Search"
-							aria-describedby="button-addon2"
-						/>
-						<div className="input-group-append">
-							<button
-								className="btn btn-outline-light"
-								type="button"
-								id="button-addon2"
-							>
-								<i
-									className="fa fa-search"
-									aria-hidden="true"
-								></i>
-							</button>
-						</div>
-						<SearchSuggestion />
-					</div>
-				</form>
+				<SearchBar />
 				<ul className="navbar-nav ml-3">
 					<li className="nav-item active">
-						<a className="nav-link" href="/">
+						<button
+							type="button"
+							className="nav-link add_btn"
+							data-toggle="modal"
+							data-target="#exampleModal"
+							data-whatever="@mdo"
+						>
 							<i
 								className="fa fa-user-plus"
 								aria-hidden="true"
 							></i>
-						</a>
+						</button>
 					</li>
 				</ul>
 			</div>
+			<AddUser />
 		</nav>
 	);
 };

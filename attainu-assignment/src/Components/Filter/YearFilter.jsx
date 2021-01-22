@@ -36,6 +36,7 @@ const YearFilter = (props) => {
 				max={curr_year}
 				step="1"
 				value={year}
+				placeholder="Enter Year"
 			/>
 			{isError && (
 				<label>
