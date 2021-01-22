@@ -23,11 +23,11 @@ class Filter extends React.Component {
 	render() {
 		return (
 			<div className="card mt-4">
-				<div className="card-header">
-					<h6 className="text-center">
+				<div className="card-header primary_bg text-white">
+					<h5 className="text-center">
 						Filter{' '}
 						<i className="fa fa-filter" aria-hidden="true"></i>
-					</h6>
+					</h5>
 				</div>
 				<div className="card-body">
 					<form onSubmit={this.onSubmitFilter}>
@@ -40,6 +40,7 @@ class Filter extends React.Component {
 							}
 						/>
 						<div className="form-group text-center">
+							<hr />
 							<button type="submit" className="btn btn-primary">
 								Submit
 							</button>

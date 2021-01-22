@@ -2,7 +2,7 @@ import AddUser from './User/AddUser';
 import SearchBar from './Search/SearchBar';
 const Header = () => {
 	return (
-		<nav className="navbar navbar-dark bg-dark">
+		<nav className="navbar navbar-dark primary_bg">
 			<a className="navbar-brand" href="/">
 				User APP
 			</a>

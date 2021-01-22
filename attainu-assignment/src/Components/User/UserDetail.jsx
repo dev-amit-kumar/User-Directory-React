@@ -3,8 +3,8 @@ import '../../css/UserDetail.css';
 import DeleteUser from './DeleteUser';
 const UserDetail = (props) => {
 	return (
-		<div className="card border-info mb-3 card-user">
-			<div className="card-header bg-info text-white">
+		<div className="card mb-4 card-user">
+			<div className="card-header primary_bg text-white">
 				<h5 className="text-center">{props.userData['Full Name']}</h5>
 			</div>
 			<div className="card-body">
