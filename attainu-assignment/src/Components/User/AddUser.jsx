@@ -22,7 +22,9 @@ const AddUser = () => {
 			})
 			.then(() => {
 				setError(false);
-				setMsg('User added succesfully');
+				setMsg(
+					'User added succesfully, Kindly refresh for updated data',
+				);
 			})
 			.catch((error) => {
 				setError(true);

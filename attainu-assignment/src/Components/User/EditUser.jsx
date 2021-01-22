@@ -32,7 +32,9 @@ const AddUser = (props) => {
 			})
 			.then(() => {
 				setError(false);
-				setMsg('User Information updated');
+				setMsg(
+					'User Information updated, Kindly refresh for updated data',
+				);
 			})
 			.catch((error) => {
 				setError(true);

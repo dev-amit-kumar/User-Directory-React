@@ -10,7 +10,9 @@ const DeleteUser = (props) => {
 			.delete(`${base_url}/${props.userId}/`)
 			.then(() => {
 				setError(false);
-				setMsg('User Information deleted');
+				setMsg(
+					'User Information deleted, Kindly refresh for updated data',
+				);
 			})
 			.catch((error) => {
 				setError(true);
@@ -49,7 +51,7 @@ const DeleteUser = (props) => {
 							{error ? (
 								<span className="text-danger">{msg}</span>
 							) : (
-								<span className="text-success">{msg}</span>
+								<span className="text-primary">{msg}</span>
 							)}
 						</p>
 					</div>
