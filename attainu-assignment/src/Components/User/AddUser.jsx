@@ -18,7 +18,7 @@ const AddUser = () => {
 				Country: country,
 				'Date of birth': `${new Date(dob).toJSON()}`,
 				Email: email,
-				'Created at': new Date(),
+				'Created at': `${new Date().toJSON()}`,
 			})
 			.then(() => {
 				setError(false);

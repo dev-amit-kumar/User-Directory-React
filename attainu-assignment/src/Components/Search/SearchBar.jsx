@@ -32,7 +32,7 @@ class SearchBar extends React.Component {
 
 	render() {
 		return (
-			<form className="form-inline ml-auto">
+			<div className="form-inline ml-auto">
 				<div className="input-group">
 					<input
 						type="search"
@@ -44,17 +44,17 @@ class SearchBar extends React.Component {
 						onChange={this.OnChangeKeyWord}
 					/>
 					<div className="input-group-append">
-						<button
+						<span
 							className="btn btn-outline-light"
 							type="button"
 							id="button-addon2"
 						>
 							<i className="fa fa-search" aria-hidden="true"></i>
-						</button>
+						</span>
 					</div>
 					{this.renderSuggestionList(this.state)}
 				</div>
-			</form>
+			</div>
 		);
 	}
 }

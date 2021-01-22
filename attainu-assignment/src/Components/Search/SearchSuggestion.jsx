@@ -1,16 +1,22 @@
 import { withRouter } from 'react-router-dom';
 
 const SearchSuggestion = (props) => {
-	const redirectMovie = (e) => {
-		// props.history.push(`/movie/${e.target.id}`);
-		console.log(e.target.value);
+	const OpenViewUser = (e) => {
+		props.history.push(`/viewUser/${e.target.id}`);
 	};
 	const renderSuggestion = () => {
 		if (props.dataList.length > 0) {
 			return props.dataList.map((suggestion, idx) => {
 				return (
-					<div onClick={redirectMovie} id={suggestion.Id} key={idx}>
-						{suggestion['Full Name']}
+					<div onClick={OpenViewUser} id={suggestion.Id} key={idx}>
+						<span
+							type="button"
+							className="text-white"
+							id={suggestion.Id}
+							onClick={OpenViewUser}
+						>
+							{suggestion['Full Name']}
+						</span>
 					</div>
 				);
 			});

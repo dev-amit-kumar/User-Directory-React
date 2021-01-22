@@ -29,6 +29,8 @@ const AddUser = (props) => {
 				Country: country,
 				'Date of birth': `${new Date(dob).toJSON()}`,
 				Email: email,
+				Id: props.data.Id,
+				'Created at': props.data['Created at'],
 			})
 			.then(() => {
 				setError(false);
@@ -81,7 +83,6 @@ const AddUser = (props) => {
 									<input
 										type="text"
 										className="form-control"
-										id="full-name"
 										placeholder="Enter full name"
 										value={name}
 										onChange={(e) =>
@@ -101,7 +102,6 @@ const AddUser = (props) => {
 									<input
 										type="email"
 										className="form-control"
-										id="email-id"
 										placeholder="Enter email id"
 										value={email}
 										onChange={(e) =>
@@ -121,7 +121,6 @@ const AddUser = (props) => {
 									<input
 										type="text"
 										className="form-control"
-										id="country"
 										placeholder="Enter country name"
 										value={country}
 										onChange={(e) =>
@@ -141,7 +140,6 @@ const AddUser = (props) => {
 									<input
 										type="date"
 										className="form-control"
-										id="dob"
 										placeholder="Enter date of birth"
 										value={dob}
 										onChange={(e) => setDOB(e.target.value)}

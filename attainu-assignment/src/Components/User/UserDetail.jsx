@@ -12,7 +12,12 @@ const UserDetail = (props) => {
 					<b>Country</b>: {props.userData.Country}
 				</p>
 				<p>
-					<b>DOB</b>: {props.userData['Date of birth']}
+					<b>DOB</b>: &nbsp;
+					{props.userData['Date of birth']
+						? new Date(
+								props.userData['Date of birth'],
+						  ).toLocaleString('default', { dateStyle: 'long' })
+						: 'Not available'}
 				</p>
 				<p>
 					<b>Email</b>: {props.userData['Email']}
