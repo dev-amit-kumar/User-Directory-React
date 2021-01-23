@@ -59,7 +59,7 @@ const ViewUser = (props) => {
 			className="container d-flex flex-column justify-content-center align-items-center"
 			style={{ height: '90vh' }}
 		>
-			<div className="card" style={{ width: '500px' }}>
+			<div className="card" style={{ width: '400px' }}>
 				<div className="card-header primary_bg text-white">
 					<h4 className="text-center">User Detail</h4>
 				</div>
